@@ -8,7 +8,6 @@ local colors = {
   green = "#93e06c",
   error = "#e05151",
   warning = "#e0a451",
-  ligh_yellow = "#DDDBBF"
 }
 
 return colors
