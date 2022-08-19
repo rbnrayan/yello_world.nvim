@@ -1,8 +1,8 @@
 local colors = require('yello_world.palette')
-
 local highlights = {}
 
 highlights.groups = {
+  -- vim base highlight groups
   Cursor = { fg = colors.bg, bg = colors.yellow },
   lCursor = { fg = colors.bg, bg = colors.yellow },
   CursorIM = { fg = colors.bg, bg = colors.yellow },
@@ -53,6 +53,7 @@ highlights.groups = {
   TablineFill = { bg = colors.bg },
   TablineSel = { fg = colors.fg, bg = colors.bg },
   Title = { fg = colors.yellow },
+  VertSplit = { fg = colors.gray, bg = colors.bg },
   Visual = { bg = colors.bg_alt },
   VisualNOS = { bg = colors.bg_alt },
   WarningMsg = { fg = colors.warning },
@@ -64,6 +65,16 @@ highlights.groups = {
   RedrawDebugComposed = { fg = colors.fg, bg = colors.green },
   RedrawDebugRecomposed = { fg = colors.fg, bg = colors.error },
 
+  Constant = { fg = colors.green },
+  Identifier = { fg = colors.fg },
+  Statement = { fg = colors.yellow },
+  PreProc = { fg = colors.yellow },
+  Type = { fg = colors.yellow },
+  Special = { fg = colors.fg },
+  Comment = { fg = colors.gray },
+  StorageClass = { fg = colors.yellow },
+
+  -- diagnostics hightlight groups (LSP)
   DiagnosticError = { fg = colors.error },
   DiagnosticWarn = { fg = colors.warning },
   DiagnosticInfo = { fg = colors.white },
@@ -85,27 +96,22 @@ highlights.groups = {
   DiagnosticSignInfo = { link = 'DiagnosticInfo' },
   DiagnosticSignHint = { link = 'DiagnosticHint' },
 
+  -- nvim highlight groups
   NvimInternalError = { fg = colors.fg, bg = colors.error, undercurl = true },
 
+  -- nvimtree highlight groups
   NvimTreeWindowPicker = { fg = colors.fg, bg = colors.yellow },
   NvimTreeIndentMarker = { fg = colors.fg },
   NvimTreeFolderIcon = { fg = colors.fg },
 
+  -- cmp highlight groups
   CmpItemAbbr = { fg = colors.fg },
   CmpItemAbbrMatch = { fg = colors.white, bold = true },
   CmpItemAbbrDeprecated = { fg = colors.gray, strikethrough = true },
   CmpItemMenu = { fg = colors.green },
   CmpItemMatchFuzzy = { fg = colors.white },
 
-  Constant = { fg = colors.green },
-  Identifier = { fg = colors.fg },
-  Statement = { fg = colors.yellow },
-  PreProc = { fg = colors.yellow },
-  Type = { fg = colors.yellow },
-  Special = { fg = colors.fg },
-  Comment = { fg = colors.gray },
-  StorageClass = { fg = colors.yellow },
-
+  -- Treesitter highlight groups
   TSStorageClass = { fg = colors.yellow },
   TSNamespace = { fg = colors.fg },
   TSTypeDefenition = { fg = colors.fg },
@@ -115,12 +121,16 @@ highlights.groups = {
   TSFuncMacro = { fg = colors.fg },
   TSType = { fg = colors.fg },
 
+  -- language specific highlight groups
+
+  -- rust
   rustModPath = { fg = colors.fg },
   rustAssert = { fg = colors.fg },
   rustType = { fg = colors.fg },
   rustIndetifier = { fg = colors.fg },
   rustSelf = { fg = colors.fg, bold = true },
 
+  -- TS
   typescriptIdentifier = { fg = colors.fg, bold = true },
   typescriptOperator = { fg = colors.yellow },
   typescriptVariable = { fg = colors.yellow },
@@ -128,13 +138,12 @@ highlights.groups = {
   typescriptPaymentShippingOptionProp = { fg = colors.fg },
   typescriptCall = { fg = colors.fg },
 
+  -- JS
   javaScriptIdentifier = { bold = true },
 
+  -- C
   cType = { fg = colors.yellow },
-  cTSType = { fg = colors.yellow },
-
-  rubyScopeOperator = { fg = colors.yellow },
-  rubySuperClassOperator = { fg = colors.yellow },
+  cTSType = { link = 'cType' },
 }
 
 return highlights
