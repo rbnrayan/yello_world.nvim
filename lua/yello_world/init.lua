@@ -1,7 +1,8 @@
 local M = {}
-local theme = require('yello_world.theme')
 
 M.setup = function ()
+  local hl_groups = require('yello_world.highlights').groups
+
   vim.cmd('hi clear')
 
   vim.o.background = 'dark'
@@ -12,7 +13,9 @@ M.setup = function ()
   vim.o.termguicolors = true
   vim.g.colors_name = 'yello_world'
 
-  theme.set_highlights()
+  for group, hl in pairs(hl_groups) do
+    vim.api.nvim_set_hl(0, group, hl)
+  end
 end
 
 return M
