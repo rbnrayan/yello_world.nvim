@@ -1,7 +1,7 @@
 local M = {}
 
 M.setup = function ()
-  local hl_groups = require('yello_world.highlights').groups
+  local hl_groups = require('yello_world.highlights').groups()
 
   vim.cmd('hi clear')
 
