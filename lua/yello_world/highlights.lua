@@ -23,7 +23,7 @@ local function get_colors()
     gray = palette.gray,
     accent = palette.blue,
     green = palette.darker_green,
-    warning = palette.warning,
+    warning = palette.darker_warning,
     error = palette.error,
   }
 

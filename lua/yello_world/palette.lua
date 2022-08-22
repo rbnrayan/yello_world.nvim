@@ -12,6 +12,7 @@ local colors = {
   warning = "#e0a451",
   blue = "#2758cc",
   darker_green = "#25b01e",
+  darker_warning = "#c48935",
 }
 
 return colors
