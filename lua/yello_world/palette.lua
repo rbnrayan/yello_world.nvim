@@ -1,7 +1,7 @@
 local colors = {
   lighter = "#efefef",
   light = "#dadada",
-  dark = "#0a0a0a",
+  dark = "#141414",
   dark_alt = "#232323",
   gray = "#787878",
   white = "#fefefe",
