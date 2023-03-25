@@ -5,25 +5,29 @@ local function get_colors()
   local palette = require('yello_world.palette')
 
   local colors = {
-    fg = palette.light,
+    fg = palette.font_light,
     fg_alt = palette.white,
-    bg = palette.dark,
-    bg_alt = palette.dark_alt,
+    bg = palette.background,
+    bg_alt = palette.background_alt,
     gray = palette.gray,
     accent = palette.yellow,
     green = palette.green,
+    slate = palette.slate,
+    brown = palette.brown,
     warning = palette.warning,
     error = palette.error,
   }
   local light_colors = {
-    fg = palette.dark,
+    fg = palette.background,
     fg_alt = palette.black,
-    bg = palette.lighter,
-    bg_alt = palette.light,
+    bg = palette.font_light_alt,
+    bg_alt = palette.font_light,
     gray = palette.gray,
     accent = palette.blue,
-    green = palette.darker_green,
-    warning = palette.darker_warning,
+    green = palette.green_alt,
+    slate = palette.blue,
+    brown = palette.brown,
+    warning = palette.warning_alt,
     error = palette.error,
   }
 
@@ -39,11 +43,11 @@ highlights.groups = function()
 
   local groups = {
     -- vim base highlight groups
-    Cursor = { fg = colors.bg, bg = colors.accent },
-    lCursor = { fg = colors.bg, bg = colors.accent },
+    -- Cursor = { fg = colors.bg, bg = colors.accent },
+    -- lCursor = { fg = colors.bg, bg = colors.accent },
     CursorIM = { fg = colors.bg, bg = colors.accent },
     CursorColumn = { fg = colors.fg, bg = colors.bg_alt },
-    CursorLine = { bg = colors.bg_alt },
+    CursorLine = { bg = colors.bg },
     Directory = { fg = colors.fg, bg = colors.bg },
     DiffAdd = { fg = colors.green, bg = colors.bg },
     DiffChange = { fg = colors.warning, bg = colors.bg },
@@ -54,14 +58,14 @@ highlights.groups = function()
     TermCursorNC = { fg = colors.bg, bg = colors.bg_alt },
     ErrorMsg = { fg = colors.error },
     WinSeparator = { fg = colors.gray, bg = colors.bg },
-    Folded = { fg = colors.green },
+    Folded = { fg = colors.brown },
     SignColumn = { bg = colors.bg },
-    IncSearch = { fg = colors.bg, bg = colors.accent },
-    Substitute = { fg = colors.bg, bg = colors.accent },
+    IncSearch = { fg = colors.fg, bg = colors.bg_alt },
+    Substitute = { fg = colors.fg, bg = colors.bg_alt },
     LineNr = { fg = colors.fg },
     LineNrAbove = { fg = colors.gray },
     LineNrBelow = { fg = colors.gray },
-    CursorLineNr = { bg = colors.bg_alt },
+    CursorLineNr = { bg = colors.bg },
     CursorLineSign = { bg = colors.bg },
     MatchParen = { fg = colors.accent },
     ModeMsg = { fg = colors.fg, bg = colors.bg },
@@ -77,7 +81,7 @@ highlights.groups = function()
     PmenuSbar = { bg = colors.bg_alt },
     PmenuThumb = { bg = colors.fg_alt },
     Question = { fg = colors.warning },
-    Search = { fg = colors.bg, bg = colors.accent },
+    Search = { fg = colors.fg, bg = colors.bg_alt },
     SpecialKey = { fg = colors.gray, bg = colors.bg },
     SpellBad = { fg = colors.error, bg = colors.bg, undercurl = true },
     SpellCap = { fg = colors.warning, bg = colors.bg, undercurl = true },
@@ -96,18 +100,20 @@ highlights.groups = function()
     Whitespace = { fg = colors.gray },
     WildMenu = { fg = colors.bg, bg = colors.accent },
     Error = { fg = colors.error },
-    Todo = { fg = colors.accent },
+    Todo = { fg = colors.brown },
     RedrawDebugClear = { fg = colors.fg, bg = colors.accent },
     RedrawDebugComposed = { fg = colors.fg, bg = colors.green },
     RedrawDebugRecomposed = { fg = colors.fg, bg = colors.error },
 
     Constant = { fg = colors.green },
     Identifier = { fg = colors.fg },
+    Operator = { fg = colors.fg },
     Statement = { fg = colors.accent },
-    PreProc = { fg = colors.accent },
-    Type = { fg = colors.accent },
+    PreProc = { fg = colors.slate },
+    Type = { fg = colors.slate },
     Special = { fg = colors.fg },
-    Comment = { fg = colors.gray },
+    Comment = { fg = colors.brown },
+    SpecialComment = { link = 'Comment' },
     StorageClass = { fg = colors.accent },
 
     -- diagnostics hightlight groups (LSP)
@@ -159,6 +165,8 @@ highlights.groups = function()
 
     -- language specific highlight groups
 
+    luaSymbolOperator = { fg = colors.fg },
+
     -- rust
     rustModPath = { fg = colors.fg },
     rustAssert = { fg = colors.fg },
@@ -178,7 +186,8 @@ highlights.groups = function()
     javaScriptIdentifier = { bold = true },
 
     -- C
-    cType = { fg = colors.accent },
+    Typedef = { link = 'Keyword' },
+    cType = { fg = colors.slate },
     cTSType = { link = 'cType' },
   }
 
