@@ -112,7 +112,7 @@ highlights.groups = function()
     Identifier = { fg = colors.fg },
     Operator = { fg = colors.fg },
     Statement = { fg = colors.fg },
-    Conditionnal = { fg = colors.accent },
+    Conditional = { fg = colors.accent },
     Repeat = { fg = colors.accent },
     Label = { fg = colors.accent },
     Keyword = { fg = colors.accent },
