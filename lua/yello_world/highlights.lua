@@ -105,7 +105,10 @@ highlights.groups = function()
     RedrawDebugComposed = { fg = colors.fg, bg = colors.green },
     RedrawDebugRecomposed = { fg = colors.fg, bg = colors.error },
 
-    Constant = { fg = colors.green },
+    Constant = { fg = colors.fg },
+    String = { fg = colors.green },
+    Character = { fg = colors.green },
+    Boolean = { fg = colors.green },
     Identifier = { fg = colors.fg },
     Operator = { fg = colors.fg },
     Statement = { fg = colors.accent },
