@@ -111,7 +111,7 @@ highlights.groups = function()
     Boolean = { fg = colors.green },
     Identifier = { fg = colors.fg },
     Operator = { fg = colors.fg },
-    Statement = { fg = colors.fg },
+    Statement = { fg = colors.accent },
     Conditional = { fg = colors.accent },
     Repeat = { fg = colors.accent },
     Label = { fg = colors.accent },
@@ -174,7 +174,15 @@ highlights.groups = function()
 
     -- language specific highlight groups
 
+    -- lua
     luaSymbolOperator = { fg = colors.fg },
+    luaBlock = { fg = colors.accent },
+    luaFunctionBlock = { fg = colors.accent },
+    luaCondEnd = { fg = colors.accent },
+    luaCondElseif = { fg = colors.accent },
+    luaCondStart = { fg = colors.accent },
+    luaStatement = { fg = colors.accent },
+    luaWhile = { fg = colors.accent },
 
     -- rust
     rustModPath = { fg = colors.fg },
@@ -198,6 +206,7 @@ highlights.groups = function()
     Typedef = { link = 'Keyword' },
     cType = { fg = colors.slate },
     cTSType = { link = 'cType' },
+    cppStatement = { fg = colors.accent },
   }
 
   return groups
