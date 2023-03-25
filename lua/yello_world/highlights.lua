@@ -206,7 +206,8 @@ highlights.groups = function()
     Typedef = { link = 'Keyword' },
     cType = { fg = colors.slate },
     cTSType = { link = 'cType' },
-    cppStatement = { fg = colors.accent },
+    cppStatement = { fg = colors.fg },
+
   }
 
   return groups
