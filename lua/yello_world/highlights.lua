@@ -114,6 +114,7 @@ highlights.groups = function()
     Statement = { fg = colors.accent },
     PreProc = { fg = colors.slate },
     Type = { fg = colors.slate },
+    Structure = { fg = colors.accent },
     Special = { fg = colors.fg },
     Comment = { fg = colors.brown },
     SpecialComment = { link = 'Comment' },
