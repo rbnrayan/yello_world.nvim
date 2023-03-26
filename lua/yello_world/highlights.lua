@@ -125,6 +125,7 @@ highlights.groups = function()
     String = { fg = colors.green },
     Structure = { fg = colors.accent },
     Type = { fg = colors.slate },
+    Typedef = { link = 'Keyword' },
 
     -- diagnostics hightlight groups (LSP)
     DiagnosticError = { fg = colors.error },
@@ -190,9 +191,11 @@ highlights.groups = function()
     -- rust
     rustModPath = { fg = colors.fg },
     rustAssert = { fg = colors.fg },
-    rustType = { fg = colors.fg },
+    rustType = { fg = colors.slate },
     rustIndetifier = { fg = colors.fg },
-    rustSelf = { fg = colors.fg, bold = true },
+    rustSelf = { fg = colors.accent },
+    rustSigil = { fg = colors.slate },
+    rustReservedKeyword = { fg = colors.accent },
 
     -- TS
     typescriptIdentifier = { fg = colors.fg, bold = true },
@@ -206,7 +209,6 @@ highlights.groups = function()
     javaScriptIdentifier = { bold = true },
 
     -- C
-    Typedef = { link = 'Keyword' },
     cType = { fg = colors.slate },
     cTSType = { link = 'cType' },
     cppStatement = { fg = colors.fg },
