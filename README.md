@@ -1,4 +1,4 @@
-# YELLOW WORLD
+# YELLO WORLD
 
 Dark theme for neovim highly inspired by [Gruber Darker](https://github.com/rexim/gruber-darker-theme) by [Alexey Kutepov](https://github.com/rexim)
 
