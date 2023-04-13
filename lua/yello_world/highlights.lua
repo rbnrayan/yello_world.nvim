@@ -13,6 +13,7 @@ local function get_colors()
     accent = palette.yellow,
     green = palette.green,
     slate = palette.slate,
+    slate_alt = palette.slate_alt,
     brown = palette.brown,
     warning = palette.warning,
     error = palette.error,
@@ -60,7 +61,7 @@ highlights.groups = function()
     WinSeparator = { fg = colors.gray, bg = colors.bg },
     Folded = { fg = colors.brown },
     SignColumn = { bg = colors.bg },
-    IncSearch = { fg = colors.fg, bg = colors.bg_alt },
+    IncSearch = { fg = colors.brown, bg = colors.bg_alt },
     Substitute = { fg = colors.fg, bg = colors.bg_alt },
     LineNr = { fg = colors.fg },
     LineNrAbove = { fg = colors.gray },
@@ -81,7 +82,7 @@ highlights.groups = function()
     PmenuSbar = { bg = colors.bg_alt },
     PmenuThumb = { bg = colors.fg_alt },
     Question = { fg = colors.warning },
-    Search = { fg = colors.fg, bg = colors.bg_alt },
+    Search = { fg = colors.brown, bg = colors.bg_alt },
     SpecialKey = { fg = colors.gray, bg = colors.bg },
     SpellBad = { fg = colors.error, bg = colors.bg, undercurl = true },
     SpellCap = { fg = colors.warning, bg = colors.bg, undercurl = true },
@@ -173,6 +174,9 @@ highlights.groups = function()
     TSTitle = { fg = colors.fg },
     TSFuncMacro = { fg = colors.fg },
     TSType = { fg = colors.fg },
+
+    ['@function'] = { fg = colors.slate_alt },
+    ['@function.call'] = { fg = colors.fg },
 
     -- language specific highlight groups
 
