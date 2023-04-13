@@ -117,7 +117,7 @@ highlights.groups = function()
     Keyword = { fg = colors.accent },
     Identifier = { fg = colors.fg },
     Operator = { fg = colors.fg },
-    PreProc = { fg = colors.slate },
+    PreProc = { fg = colors.slate_alt },
     Repeat = { fg = colors.accent },
     Special = { fg = colors.fg },
     SpecialComment = { link = 'Comment' },
