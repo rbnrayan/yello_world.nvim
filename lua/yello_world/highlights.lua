@@ -177,6 +177,8 @@ highlights.groups = function()
 
     ['@function'] = { fg = colors.slate_alt },
     ['@function.call'] = { fg = colors.fg },
+    ['@method'] = { link = '@function' },
+    ['@method.call'] = { link = '@function.call' },
 
     -- language specific highlight groups
 
